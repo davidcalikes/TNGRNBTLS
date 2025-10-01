@@ -21,19 +21,17 @@ body {
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-/* Heading styling */
-h1 {
-    color: #2e7d32;
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 2.5rem;
+.bottle-container {
+    width: 100%;
 }
 
 .bottle {
-    width: 50px;
+    width: 60px;
     height: 200px;
+    margin-left: 1 rem;
 }
 
 
