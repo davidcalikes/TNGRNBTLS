@@ -15,7 +15,7 @@ body {
 
 /* Container styling */
 .container {
-    max-width: 800px;
+    max-width: 1080px;
     margin: 0 auto;
     padding: 40px;
     background-color: white;
@@ -31,40 +31,13 @@ h1 {
     font-size: 2.5rem;
 }
 
-/* Paragraph styling */
-p {
-    margin-bottom: 15px;
-    text-align: center;
+.bottle {
+    width: 50px;
+    height: 200px;
 }
 
-/* Test message styling - to verify CSS is working */
-#test-message {
-    color: #1976d2;
-    font-weight: bold;
-    font-size: 1.2rem;
-    padding: 10px;
-    background-color: #e3f2fd;
-    border-left: 4px solid #1976d2;
-}
 
-/* Button styling */
-#test-button {
-    display: block;
-    margin: 20px auto;
-    padding: 15px 30px;
-    font-size: 1.1rem;
-    color: white;
-    background-color: #4caf50;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
 
-#test-button:hover {
-    background-color: #45a049;
-}
 
-#test-button:active {
-    transform: scale(0.98);
-}
+
+
