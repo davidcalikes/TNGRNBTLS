@@ -29,6 +29,22 @@ body {
     animation: growShrink 1s infinite ease-in-out;
   }
 
+  @keyframes rotateExit {
+    0% {
+      transform: scale(1) rotate(0deg) translateY(0);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(0.5) rotate(720deg) translateY(200vh);
+      opacity: 0;
+    }
+  }
+  
+  .exit {
+    animation: rotateExit 1s forwards ease-in-out;
+    pointer-events: none; /* Prevent interaction during exit */
+  }
+
 /* Container styling */
 .container {
     max-width: 1080px;
