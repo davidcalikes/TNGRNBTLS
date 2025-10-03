@@ -1,15 +1,12 @@
-// Test function to verify JavaScript is working
-function testJavaScript() {
-    alert('JavaScript is working! The script.js file is properly linked.');
-    console.log('Test function executed successfully!');
-}
-
-// Add event listener to the test button when DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
-    const testButton = document.getElementById('test-button');
-    
-    if (testButton) {
-        testButton.addEventListener('click', testJavaScript);
-        console.log('Event listener attached to test button.');
+document.addEventListener("click", function(event) {
+    // Check if the clicked element should be animated (e.g., has class 'anim-target')
+    if (event.target.matches(".anim-target")) {
+      // Remove active class from all other targets
+      document.querySelectorAll(".anim-target.active").forEach(function(el) {
+        el.classList.remove("active");
+      });
+  
+      // Add active class to clicked element
+      event.target.classList.add("active");
     }
-});
+  });

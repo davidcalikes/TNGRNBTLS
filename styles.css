@@ -13,6 +13,22 @@ body {
     padding: 20px;
 }
 
+@keyframes growShrink {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .active {
+    animation: growShrink 1s infinite ease-in-out;
+  }
+
 /* Container styling */
 .container {
     max-width: 1080px;
