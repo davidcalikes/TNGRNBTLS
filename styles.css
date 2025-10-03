@@ -29,20 +29,31 @@ body {
     animation: growShrink 1s infinite ease-in-out;
   }
 
-  @keyframes rotateExit {
+  @keyframes spin {
     0% {
-      transform: scale(1) rotate(0deg) translateY(0);
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes fall {
+    0% {
+      transform: translateY(0);
       opacity: 1;
     }
     100% {
-      transform: scale(0.5) rotate(720deg) translateY(200vh);
+      transform: translateY(200vh);
       opacity: 0;
     }
   }
   
   .exit {
-    animation: rotateExit 1s forwards ease-in-out;
-    pointer-events: none; /* Prevent interaction during exit */
+    animation:
+      spin 0.5s linear infinite,
+      fall 1.2s ease-in-out forwards;
+    pointer-events: none;
   }
 
 /* Container styling */

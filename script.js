@@ -14,25 +14,20 @@ document.addEventListener("click", function(event) {
   document.addEventListener("click", function(event) {
     const target = event.target;
   
-    // Only respond to clicks on .anim-target elements
     if (!target.classList.contains("anim-target")) return;
   
-    // If already exiting, do nothing
     if (target.classList.contains("exit")) return;
   
-    // If already active, trigger exit animation
     if (target.classList.contains("active")) {
       target.classList.remove("active");
       target.classList.add("exit");
   
-      // Optional: Remove the element after animation ends
       target.addEventListener("animationend", () => {
-        target.remove(); // or hide it: target.style.display = "none";
+        target.remove(); // Or: target.style.display = "none";
       }, { once: true });
   
     } else {
-      // Make this element active and remove active from others
-      document.querySelectorAll(".anim-target.active").forEach(function(el) {
+      document.querySelectorAll(".anim-target.active").forEach(el => {
         el.classList.remove("active");
       });
   
