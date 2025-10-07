@@ -29,33 +29,16 @@ body {
     animation: growShrink 1s infinite ease-in-out;
   }
 
-  @keyframes spin {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-  
-  @keyframes fall {
-    0% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-    100% {
-      transform: translateY(200vh);
-      opacity: 0;
-    }
-  }
-  
-  .exit {
-    animation:
-      spin 0.5s linear infinite,
-      fall 1.2s ease-in-out forwards;
-    pointer-events: none;
+  @keyframes recycleAnim {
+    0% { transform: scale(1.1) rotate(0deg); }
+    50% { transform: scale(0.8) rotate(360deg); opacity: 0.5; }
+    100% { transform: scale(1) rotate(0deg); opacity: 1; }
   }
 
+  .recycle {
+    animation: recycleAnim 0.8s ease;
+  }
+  
 /* Container styling */
 .container {
     max-width: 1080px;
