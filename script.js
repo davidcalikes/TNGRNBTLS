@@ -20,8 +20,14 @@ document.addEventListener("click", function(event) {
 
     // When animation finishes, move to next element
     activeEl.addEventListener("animationend", function handler() {
-      activeEl.classList.remove("active", "recycle");
+      // Remove listener immediately to prevent duplicate triggers
       activeEl.removeEventListener("animationend", handler);
+
+      // Hide the clicked element
+      activeEl.style.visibility = "hidden";
+
+      // Remove animation/active classes
+      activeEl.classList.remove("active", "recycle");
 
       // 2️⃣ Find next target
       const currentIndex = parseInt(
