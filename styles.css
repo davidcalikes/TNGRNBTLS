@@ -30,13 +30,22 @@ body {
   }
 
   @keyframes recycleAnim {
-    0% { transform: scale(1.1) rotate(0deg); }
-    50% { transform: scale(0.8) rotate(360deg); opacity: 0.5; }
-    100% { transform: scale(1) rotate(0deg); opacity: 1; }
+    0% {
+      transform: scale(1) rotate(0deg);
+      opacity: 1;
+    }
+    60% {
+      transform: scale(2.5) rotate(360deg);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(6) rotate(720deg);
+      opacity: 0;
+    }
   }
-
+  
   .recycle {
-    animation: recycleAnim 0.8s ease;
+    animation: recycleAnim 1.5s ease-in-out forwards;
   }
   
 /* Container styling */
